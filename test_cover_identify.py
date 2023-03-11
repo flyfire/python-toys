@@ -12,10 +12,11 @@ def test():
     url = "http://119.23.148.25:9900/paipai/coverIdentify"
     files = {'file': ("cover-crop.jpeg", open("cover-crop.jpeg", "rb"), "image/jpeg", {})}
     res = requests.request("POST", url, data=None, files=files, headers=headers)
-    print("status code " + str(res.status_code) + "\n")
-    print("response " + res.text + "\n")
-    print("******************************\n")
+    print("status code " + str(res.status_code))
+    print("response " + res.text)
+    print("******************************")
 
 
 if __name__ == '__main__':
-    test()
+    for i in range(20):
+        test()
